@@ -5,52 +5,36 @@ export const convertMarkdownToHtml = (markdown: string): string => {
 };
 
 export const templates = {
-  titlePage: `
-<div class="title-page">
+  titlePage: `<div class="title-page">
   # Your Document Title
   ## Subtitle goes here
 </div>`,
-  pageHeader: `
-<div class="page-header">
+  pageHeader: `<div class="page-header">
   # Page Title
   ## Subtitle
   ![Header Image](placeholder.svg)
 </div>`,
-  paragraph: `
-This is a paragraph block. Replace this text with your content.
-`,
-  menuBar: `
-<nav class="nav-section">
+  paragraph: `This is a paragraph block. Replace this text with your content.`,
+  menuBar: `<nav class="nav-section">
   - [Home](#)
   - [About](#)
   - [Contact](#)
 </nav>`,
-  heroSection: `
-<div class="hero-section">
+  heroSection: `<div class="hero-section">
   # Welcome
   ## Start your journey here
   [Get Started](#)
 </div>`,
-  headline: `
-# Main Headline
-`,
-  subheadline: `
-## Sub Headline
-`,
-  image: `
-![Image Description](placeholder.svg)
-*Image caption goes here*
-`,
-  orderedList: `
-1. First item
+  headline: `# Main Headline`,
+  subheadline: `## Sub Headline`,
+  image: `![Image Description](placeholder.svg)
+*Image caption goes here*`,
+  orderedList: `1. First item
 2. Second item
-3. Third item
-`,
-  unorderedList: `
-- First point
+3. Third item`,
+  unorderedList: `- First point
 - Second point
-- Third point
-`
+- Third point`
 };
 
 export const sectionTypes = [

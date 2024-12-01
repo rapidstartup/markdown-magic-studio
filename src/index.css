@@ -47,7 +47,7 @@
 }
 
 .dropdown-content {
-  @apply bg-white border border-gray-200 shadow-lg rounded-md overflow-hidden;
+  @apply bg-white border border-gray-200 shadow-lg rounded-md overflow-hidden z-50;
 }
 
 [role="menuitem"] {

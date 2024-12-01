@@ -16,6 +16,13 @@ interface ToolbarProps {
 }
 
 export const Toolbar = ({ onExport, onInsertTemplate }: ToolbarProps) => {
+  console.log("Toolbar rendered with section types:", sectionTypes);
+  
+  const handleSectionClick = (markdown: string) => {
+    console.log("Section clicked, inserting markdown:", markdown);
+    onInsertTemplate(markdown);
+  };
+
   return (
     <div className="flex items-center gap-4 mb-6 p-4 bg-white rounded-lg shadow-sm">
       <div className="flex items-center gap-2">
@@ -27,13 +34,13 @@ export const Toolbar = ({ onExport, onInsertTemplate }: ToolbarProps) => {
                 {type.name}
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="dropdown-content w-[300px]">
+            <DropdownMenuContent className="dropdown-content w-[300px] bg-white">
               <DropdownMenuLabel>{type.name} Sections</DropdownMenuLabel>
               <DropdownMenuSeparator />
               {type.sections.map((section) => (
                 <DropdownMenuItem
                   key={section.name}
-                  onClick={() => onInsertTemplate(section.markdown)}
+                  onClick={() => handleSectionClick(section.markdown)}
                   className="flex flex-col items-start py-2"
                 >
                   <span className="font-medium">{section.name}</span>
