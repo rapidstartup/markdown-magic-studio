@@ -40,3 +40,16 @@
 .page-header {
   @apply mb-12;
 }
+
+/* Dropdown menu styles */
+[data-radix-popper-content-wrapper] {
+  @apply z-50;
+}
+
+.dropdown-content {
+  @apply bg-white border border-gray-200 shadow-lg rounded-md overflow-hidden;
+}
+
+[role="menuitem"] {
+  @apply hover:bg-accent hover:text-primary cursor-pointer;
+}

@@ -27,16 +27,17 @@ export const Toolbar = ({ onExport, onInsertTemplate }: ToolbarProps) => {
                 {type.name}
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="dropdown-content w-[300px]">
               <DropdownMenuLabel>{type.name} Sections</DropdownMenuLabel>
               <DropdownMenuSeparator />
               {type.sections.map((section) => (
                 <DropdownMenuItem
                   key={section.name}
                   onClick={() => onInsertTemplate(section.markdown)}
+                  className="flex flex-col items-start py-2"
                 >
-                  {section.name}
-                  <span className="ml-2 text-xs text-gray-500">
+                  <span className="font-medium">{section.name}</span>
+                  <span className="text-xs text-gray-500">
                     {section.description}
                   </span>
                 </DropdownMenuItem>
