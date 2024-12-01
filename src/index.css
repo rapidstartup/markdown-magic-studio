@@ -23,3 +23,20 @@
 .preview-pane {
   @apply bg-white rounded-lg p-8 shadow-sm border border-gray-100;
 }
+
+/* Section-specific styles */
+.hero-section {
+  @apply bg-accent py-24 px-8 text-center mb-12;
+}
+
+.nav-section {
+  @apply flex justify-between items-center py-4 mb-8;
+}
+
+.title-page {
+  @apply min-h-screen flex items-center justify-center text-center;
+}
+
+.page-header {
+  @apply mb-12;
+}
